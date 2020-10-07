@@ -1,0 +1,143 @@
+#colorbox, 
+#cboxOverlay, 
+#cboxWrapper {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	z-index: 1001; 
+}
+
+#cboxOverlay {
+	position: fixed; 
+	width: 100%; 
+	height: 100%;
+	background-color: #000;
+}
+
+#cboxMiddleLeft, 
+#cboxBottomLeft {
+	clear: left;
+}
+
+#cboxLoadedContent,
+#cboxLoadingGraphic {
+	background-color: #fff;
+}
+
+#cboxContent {
+	position: relative; 
+	margin: 35px;
+}
+
+#cboxLoadedContent {
+	overflow: visible !important;
+}
+
+#cboxLoadingOverlay,
+#cboxLoadingGraphic {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%
+}
+
+#cboxPrevious, 
+#cboxNext, 
+#cboxClose, 
+#cboxSlideshow {
+	cursor: pointer;
+}
+
+.cboxPhoto {
+	float: left;
+	margin: auto;
+	display: block;
+}
+
+.cboxIframe {
+	width: 100%;
+	height: 100%;
+	display: block; 
+	border: 0;
+}
+
+#colorbox, 
+#cboxContent, 
+#cboxLoadedContent {
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+}
+
+#cboxContent {
+	overflow: visible; 
+}
+
+#cboxLoadingGraphic {
+	background-image: url("../../../themes/garden/images/loading.gif");
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+
+#cboxTitle { 
+    width: 100%; 
+    padding: 10px 0 0 0;
+}
+
+#cboxCurrent {
+	position: absolute; 
+	top: -22px; 
+	right: 205px; 
+	text-indent: -9999px;
+}
+
+#cboxPrevious, 
+#cboxNext, 
+#cboxClose {
+	display: block;
+	border: none;
+	text-indent: -9999px;
+	position: absolute;
+}
+
+#cboxPrevious {
+	width: 30px; 
+	height: 30px; 
+	background-color: transparent;
+	background-image: url("../../../themes/garden/images/prev.svg"); 
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	left: -40px; 
+	top: 50%; 
+	margin-top: -15px;
+	z-index: 1000;
+}
+
+#cboxNext {
+	width: 30px; 
+	height: 30px; 
+	background-color: transparent;
+	background-image: url("../../../themes/garden/images/next.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+	right: -40px; 
+	top: 50%; 
+	margin-top: -15px;
+	z-index: 1000;
+}
+
+#cboxClose {
+    width: 25px; 
+	height: 25px; 
+	background-color: transparent;
+	background-image: url("../../../themes/garden/images/close.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 50% 50%;
+    right: -35px; 
+	top: -35px; 
+	z-index: 1000;
+}
+
