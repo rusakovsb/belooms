@@ -1,211 +1,44 @@
-.sidebar-left,
-.mobile-nav {
-    background-color: #013745;
+body {
+    background: #3782dd;
 }
 
-.topbar {
-    background-color: #012d38;
-}
-
-.flexslider,
-.footer {
-    background-color: #01222b;
-}
-
-.view-features,
-.slide__title,
-.excursion__text-inner,
-.person__text-inner,
-.service__text-inner,
-.product__text,
-.plant__text-inner,
-.cboxPhoto,
-.map-point__number,
-.map-point__title,
-.mobile-nav-toggle span,
-.sidebar-toggle span,
-.figure__caption {
-    background-color: #fff;
-}
-
-.breadcrumb,
-.sidebar-right .block {
-    background-color: #ecf2f4;
-}
-
-
-#block-views-block-features-block-1 {
-    background-color: transparent !important;
+.header {
+	background: #448fea;
 }
 
 .main-menu__link,
-.left-menu__link,
-.main-menu__link_active:hover,
-.main-menu__link.is-active:hover,
-.left-menu__link_active:hover,
-.social-icon,
-.button,
-.button:hover,
-.button:active,
-.button:focus,
-.tabs a,
-.tabs a:hover,
-#cboxTitle,
-.pager__link,
-.pager__link:hover,
-.mobile-nav,
-.mobile-menu__link {
+.top-menu__link {
     color: #fff;
 }
 
-.main-menu__link:hover,
-.left-menu__link:hover,
-.mobile-menu__link:hover,
-.mobile-nav .contacts__link,
-.footer a:hover {
-    color: #53cc9a;
+.breadcrumb {
+    color: #a2a8b0;
 }
 
-a,
-.legend__link {
-    color: #02657f;
+.content a {
+    color: #3782dd;
 }
 
-a:hover,
-a:active,
-a:focus,
-.legend__link:hover {
-    color: #1f9363;
-}
-
-.taxonomy-menu__link:before{
-    border-color: #02657f;
-}
-
-.legend__link {
-    border-color: #02687a;
-}
-
-.legend__link:hover {
-    border-color: #1f9363;
-}
-
-.map-point__number {
-    color: #168d51;
-}
-
-.main-menu__link:after,
-.site-branding__link,
-.top-search-form_focused .top-search-form__button,
-.button,
-.features__item:before,
-.features__item:after,
-.social__item,
-.node__content li:before,
-.views-field-field-structure-text li:before,
-.view-collection-description li:before,
-.view-slider .flex-direction-nav li a,
-.tabs a,
-a.has-arrow:before,
-.left-menu__link:before,
-.sidebar-right .block-title:after,
-.messages_status:before,
-.webform-confirmation__message:before,
-.legend__sign,
-.pager__link,
-.mobile-menu__link:before {
-    background-color: #1f9363;
-}
-
-.top-search-form__text,
-.top-search-form__button {
-    background-color: #024152;
-}
-
-.top-search-form__text {
+.header,
+.intro {
     color: #fff;
 }
 
-.top-search-form_focused .top-search-form__text {
-    background-color: #fff;
-    color: #000;
-}
-
-.site-branding__link:hover,
-.button:hover,
-.social__item:hover,
-.view-slider .flex-control-paging li a:hover,
-.view-slider .flex-direction-nav a:hover,
-.tabs a:hover,
-.pager__link:hover {
-    background-color: #1a7b53;
-}
-
-.view-slider .flex-control-paging li a.flex-active {
-    background: #1f9363;
-    background: rgba(24, 155, 89, 1);
-}
-
-.site-branding__text {
-    color: #013745;
-}
-
-.contacts__link,
-.news-block-item__period,
-.excursion__period,
-.person__phone,
-.product__price,
-.reception-item__phone,
-.conference__period,
-.price-table td:last-child,
-.field_type_daterange,
-.field_name_field-product-price,
-.event__period {
-    color: #1f9363;
-}
-
-.plant__latin-name {
-    color: #5e5f60;
-}
-
-.breadcrumb,
-.node__meta,
-.news-block-item__created,
-.news-item__created,
-.form__description {
-    color: #949d9f;
-}
-
-.features__item,
-.view-slider .flex-control-paging a {
-    border-color: #1f9363;
+.region-content {
+    background: #fff;
+    color: #333;
 }
 
 .form-text,
 .form-email,
-.form-textarea,
-.news-block-item,
-.news-item,
-.reception-item,
-.conference,
-.search-result__snippet,
-tr {
-    border-color: #b2bdc0;
+.form-textarea {
+    border-color: #acacac;
 }
 
 .form-text:focus,
 .form-email:focus,
 .form-textarea:focus {
-	border-color: #1f9363;
-}
-
-.pager__item_active a {
-    background-color: #949d9f;
-}
-
-.footer,
-.footer a {
-    color: #4a8493;
+	border-color: #7a7a7a;
 }
 
 .messages_status,
@@ -214,28 +47,19 @@ tr {
     color: #1f9363;    
 }
 
+.messages_status:before, 
+.webform-confirmation__message:before {
+    background-color: #1f9363;  
+}
+
 .messages_error {    
     border-color: #cc3131;
     color: #cc3131;
 }
 
-.messages_error:before {    
-	background-color: #cc3131;
+.messages_error:before {
+    background-color: #cc3131;  
 }
 
-.map-point__title {
-    border-color: #137644;
-}
 
-.map-point__title-inner:before {
-    border-top-color: #137644;
-}
-
-.map-point__title-inner:after {
-    border-top-color: #fff;
-}
-
-.figure__caption {
-    color: #575859;
-}
 

@@ -1,5 +1,5 @@
 # Schema for the configuration files of the theme.
 
-garden.settings:
+belooms.settings:
   type: theme_settings
-  label: 'Garden settings'
+  label: 'Belooms settings'

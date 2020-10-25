@@ -1,82 +1,60 @@
 (function ($) {
 
-    // Search form
+    var showContent = function() { 
+        $(".content").fadeIn(200); 
+        TweenMax.staggerTo(".news-item", 1, {
+            ease: Power3.easeOut,
+            delay: 0.5,
+            opacity: "1"   
+        }, 0.1);            
+    };
 
-    $(".top-search-form").focusin(function() {
-        $(this).addClass("top-search-form_focused");
-    }); 
+    var hideContent = function() { 
+        $(".content").fadeOut(200); 
+        TweenMax.staggerTo(".news-item", 1, {
+            ease: Power3.easeOut,
+            opacity: "0"   
+        }, 0.1);            
+    };
 
-    $(".top-search-form" ).focusout(function() {
-        $(this).removeClass("top-search-form_focused");
-    }); 
-    
-    $(".block").removeClass("container-inline");
-    
-    // Sidebar
+    $(".menu a, .site-branding__logo").addClass("ajax-link");
 
-    $(".sidebar-left").prepend('<button class="sidebar-toggle"><span></span><span></span><span></span></button>');
-	
-    $(".sidebar-toggle").click(function() {               
-        if(!$(this).hasClass("is-active")) {  
-            $(this).addClass("is-active");          
-            TweenMax.to(".sidebar-left", 1, {
-                ease: Expo.easeInOut,
-                x: "0"     
-            })       
-        }
-        else {      
-            $(this).removeClass("is-active");      
-            TweenMax.to(".sidebar-left", 1, {                
-                ease: Expo.easeInOut,
-                x: "-20rem"
-            })     
-        }
+    $(window).on("load", function() {                
+        showContent();
     });
 
-    // Files
-	
-    $(".file--x-office-document a").attr("target","_blank");
-    $(".file--application-pdf a").attr("target","_blank");
-
-    // Structure menu
-	
-    $(".taxonomy-menu > .taxonomy-menu__item_expanded > a").contents().unwrap().wrap('<h5 class="taxonomy-menu__subtitle">');
-
-    // Masonry
-    
-    $(".masonry").imagesLoaded( function() {
-        $(".masonry .view-content").masonry({      
-          itemSelector: '.masonry-item',
-        })         
+    $(document).on("click", ".ajax-link", function(event) {
+        event.preventDefault();
+        $(".ajax-link").not(this).removeClass("is-active");
+        $(this).addClass("is-active");   
+        hideContent(); 
+        if ($(this).hasClass("site-branding__logo")) {
+            setTimeout(function () {
+                $("body").addClass("path-frontpage");
+            }, 200);
+        } else {
+            setTimeout(function () {
+                $("body").removeClass("path-frontpage");
+            }, 200);
+        }        
+        var ajaxUrl = $(this).attr("href");        
+        $.ajax({
+            url: ajaxUrl,
+            type: "POST",
+            cache: "false",
+            dataType: "html",
+            success: function(data) {
+                $(".content").html($(data).find(".content").html());  
+                showContent();              
+                document.title = $(data).find(".page__title").text();      
+                window.history.pushState(null, null, ajaxUrl);            
+                $(window).scrollTop(0);       
+            }
+        });    
+  
     });
-
-    // Mobile menu
-
-    $(".mobile-nav-toggle").click(function() {               
-        if(!$(this).hasClass("is-active")) {  
-            $(this).addClass("is-active");          
-            TweenMax.to(".mobile-nav", 0.3, {
-                ease: Power1.easeOut,
-                visibility: "visible",
-                opacity: "1"     
-            })       
-        }
-        else {      
-            $(this).removeClass("is-active");      
-            TweenMax.to(".mobile-nav", 0.3, {                
-                ease: Power1.easeOut,
-                opacity: "0",
-                onComplete: function() {
-                    $(".mobile-nav").css("visibility", "hidden");
-            }});      
-        }
-    });
-
-    // Map link
-
-    $(".map-link").attr({
-        "data-colorbox-inline": "#block-map",
-        "data-width": "1550px"
-    });
+    window.onpopstate = function() {
+        location.reload();
+    };
     
 })(jQuery);
