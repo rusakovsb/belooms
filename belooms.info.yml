@@ -11,7 +11,10 @@ regions:
   header: 'Header' 
   topbar: 'Top Bar'
   intro: 'Intro'
-  content: 'Page Content'
+  title: 'Title'
+  content: 'Content'
+  sidebar_second: 'Sidebar Second'
+  mobile_nav: 'Mobile Navigation'
 
 # Information
 version: '1.0'

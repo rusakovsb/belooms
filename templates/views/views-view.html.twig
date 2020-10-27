@@ -46,12 +46,12 @@
   {% endif %}
   {{ title_suffix }}
   {% if header %}
-    <div class="view-header">
+    <div class="view__header">
       {{ header }}
     </div>
   {% endif %}
   {% if exposed %}
-    <div class="view-filters">
+    <div class="view__filters">
       {{ exposed }}
     </div>
   {% endif %}
@@ -62,7 +62,7 @@
   {% endif %}
 
   {% if rows %}
-    <div class="view-content">
+    <div class="view__content">
       {{ rows }}
     </div>
   {% elseif empty %}
@@ -83,7 +83,7 @@
     {{ more }}
   {% endif %}
   {% if footer %}
-    <div class="view-footer">
+    <div class="view__footer">
       {{ footer }}
     </div>
   {% endif %}

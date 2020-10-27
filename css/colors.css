@@ -1,50 +1,111 @@
-body {
+body,
+.intro__image-overlay,
+.mobile-nav {
     background: #3782dd;
 }
 
 .header {
-	background: #448fea;
+	background: #4b94ee;
 }
 
-.main-menu__link,
-.top-menu__link {
-    color: #fff;
-}
-
-.breadcrumb {
-    color: #a2a8b0;
-}
-
-.content a {
-    color: #3782dd;
+.region-sidebar-second {
+	background: #2f6fbd;
 }
 
 .header,
-.intro {
+.intro__text,
+.main-menu__link,
+.top-menu__link,
+.page__title,
+.button,
+.region-sidebar-second .block__title,
+.news-block-item__title a,
+.mobile-menu__link {
     color: #fff;
 }
 
-.region-content {
+.conference__title a,
+.news-item__title a,
+.project__title a,
+.article__title a,
+.partner__title a {
+    color: #000;
+}
+
+
+.node__metadata {
+    color: #a2a8b0;
+}
+
+.node__content a {
+    color: #2f6fbd;
+}
+
+.node__content a:hover {
+    color: #3782dd;
+}
+
+.button {
+    background: #2f6fbd;
+}
+
+.button:hover {
+    background: #448fea;
+}
+
+.region-content,
+.top-menu__link:after,
+.mobile-nav-toggle span {
     background: #fff;
+}
+
+.node__content,
+.partner__descr,
+.view__header {
     color: #333;
+}
+
+.news-item__summary,
+.conference__summary,
+.project__summary,
+.article__summary {
+    color: #737373;
+}
+
+.news-block-item {
+	border-bottom: 2px solid #4b94ee;
+}
+
+.news-block-item:last-child {
+	border-bottom: none;
+}
+
+.news-block-item__date,
+.news-block-item__summary {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.article__title,
+.partner__header {
+	border-bottom: 2px solid rgba(75, 148, 238, 0.5);
 }
 
 .form-text,
 .form-email,
 .form-textarea {
-    border-color: #acacac;
+    border: 1px solid #acacac;
 }
 
 .form-text:focus,
 .form-email:focus,
 .form-textarea:focus {
-	border-color: #7a7a7a;
+	border: 1px solid #7a7a7a;
 }
 
 .messages_status,
-.webform-confirmation__message {
-    border-color: #1f9363;
-    color: #1f9363;    
+.webform-confirmation__message {    
+    color: #1f9363;  
+    background: rgba(31, 147, 99, 0.1);
 }
 
 .messages_status:before, 
@@ -52,9 +113,8 @@ body {
     background-color: #1f9363;  
 }
 
-.messages_error {    
-    border-color: #cc3131;
-    color: #cc3131;
+.messages_error { 
+    background: rgba(204, 49, 49, 0.1);
 }
 
 .messages_error:before {

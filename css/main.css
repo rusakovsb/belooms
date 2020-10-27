@@ -74,6 +74,10 @@ body {
 	font-family: 'ProximaNova';		
 }
 
+.page {
+	height: 100%;
+}
+
 strong, 
 b {
 	font-weight: 500;
@@ -85,7 +89,7 @@ em {
 
 a {
     text-decoration: none;
-    transition: color 0.2s linear, background-color 0.2s linear;
+    transition: color 0.2s linear, background 0.2s linear;
 }
 
 /*------------------------------------------------------------*/
@@ -93,9 +97,19 @@ a {
 /*------------------------------------------------------------*/
 
 .region-header,
-.region-topbar {
+.region-topbar,
+.content-wrapper {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+.region-header,
+.region-topbar {
 	justify-content: space-between;
+}
+
+.region-topbar {
+	align-items: center;
 }
 
 .header {
@@ -105,6 +119,8 @@ a {
     left: 0;
 	width: 20rem; 	
 	height: 100%;
+	display: block;
+	opacity: 0;
 }
 
 .region-header {
@@ -112,30 +128,34 @@ a {
 	flex-direction: column;	
 	width: 100%;
 	height: 100%;
-	padding: 2.5rem;
+}
+
+.topbar {
+	position: relative;	
+	z-index: 100;
 }
 
 .topbar,
 .content {
 	margin: 0 0 0 20rem;
+	display: block;
+	opacity: 0;
 }
 
+.region-header,
 .topbar,
-.region-content {
+.region-title,
+.region-content,
+.region-sidebar-second {
 	padding: 2.5rem;
 }
 
-.path-frontpage .topbar {
-	position: absolute;	
-	z-index: 100;
-	top: 0;
-	right: 0;
-	left: 20rem;
-	margin: 0;
+.region-content {
+    flex: 0 0 70%;
 }
 
-.content {
-	display: none;
+.region-sidebar-second {
+    flex: 0 0 30%;
 }
 
 /*------------------------------------------------------------*/
@@ -145,6 +165,7 @@ a {
 .site-branding__logo {
 	display: block;
 	width: 5rem;
+	transform: translateX(-7.5rem);
 }
 
 .site-branding__logo img {
@@ -163,9 +184,14 @@ a {
 	list-style: none;
 }
 
+.main-menu__item {
+	opacity: 0;
+}
+
 .main-menu__link {
+    position: relative;
 	display: block;
-	padding: 0.25rem 0;
+	padding: 0.375rem 0;
 	font-size: 1.625rem;	
 	font-weight: 400;
 }
@@ -183,12 +209,37 @@ a {
 
 .top-menu__item {
 	margin: 0 1.5rem 0 0;
+	opacity: 0;
 }
 
 .top-menu__link {
+	position: relative;
 	display: block;
+	padding: 0 0 0.625rem 0;
 	font-size: 1.125rem;
 	font-weight: 400;
+}
+
+.top-menu__link:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+    opacity: 0;
+    transition: 0.2s linear;
+}
+
+.top-menu__link:hover:after {
+	opacity: 0.5;
+	bottom: 0.25rem;
+}
+
+.top-menu__link.is-active:after {
+	opacity: 1;
+	bottom: 0.25rem;
 }
 
 /*------------------------------------------------------------*/
@@ -217,14 +268,14 @@ a {
 /*------------------------------------------------------------*/
 
 .page__title {
-	margin: 0 0 2.5rem 0;
-    font-size: 3rem;
+	margin: 0;
+    font-size: 2.5rem;
 	font-weight: 600;
 }
 
 .block__title {
     margin: 0 0 1.5rem 0;
-    font-size: 1.875rem;
+    font-size: 2rem;
     font-weight: 600;	
 }
 
@@ -232,38 +283,45 @@ a {
 /* Nodes 
 /*------------------------------------------------------------*/
 
+.node__metadata {
+	margin: 0 0 1.5rem 0;
+	font-size: 1.125rem;
+	font-weight: 300;
+}
+
 .node__content {	
 	font-size: 1.125rem;
 	font-weight: 400;
+	line-height: 1.5;
 }
 
 .node__content h2 {
     margin: 0 0 1.5rem 0;
-    font-size: 1.875rem;
+    font-size: 2.25rem;
 	font-weight: 600;
 }
 
 .node__content h3 {
     margin: 0 0 1.25rem 0;
-    font-size: 1.625rem;
+    font-size: 2rem;
 	font-weight: 500;
 }
 
 .node__content h4 {
-    margin: 0 0 1.25rem 0;
-    font-size: 1.375rem;
+    margin: 0 0 1rem 0;
+    font-size: 1.75rem;
 	font-weight: 500;
 }
 
 .node__content h5 {
-    margin: 0 0 1rem 0;
-    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.5rem;
 	font-weight: 500;
 }
 
 .node__content h6 {
-    margin: 0 0 1rem 0;
-    font-size: 1.125rem;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.25rem;
 	font-weight: 500;
 }
 
@@ -273,6 +331,27 @@ a {
 
 .node__content p:last-child {
     margin: 0;
+}
+
+/*------------------------------------------------------------*/
+/* Forms, Buttons
+/*------------------------------------------------------------*/
+
+.form-text,
+.form-email,
+.form-textarea {
+	padding: 0.25rem 0.5rem;
+	font-family: 'ProximaNova';
+    border-color: #acacac;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.75rem 2rem;
+	font-family: 'ProximaNova';
+	font-size: 1.25rem;
+	font-weight: 400;
+	border: none;
 }
 
 /*------------------------------------------------------------*/
@@ -307,7 +386,7 @@ a {
 
 .messages,
 .webform-confirmation__message {
-    border: 0.125rem solid;
+	border: none;
     border-radius: 0;
 	margin: 0 0 2rem 0;
     padding: 1.5rem 1.5rem 1.5rem 4rem;
@@ -318,7 +397,6 @@ a {
 .messages_status,
 .messages_error {
     background-image: none;
-	-webkit-box-shadow: none;
 	box-shadow: none;
 	background-color: transparent;
 }
@@ -334,7 +412,6 @@ a {
 	top: 50%;
 	left: 2rem;
 	margin: -1rem 0 0 -1rem;
-    background-image: url(../images/ok.svg);
 	background-repeat: no-repeat;
 	background-size: 1rem auto;
 	background-position: 50% 50%;
@@ -349,4 +426,100 @@ a {
 .messages_error:before {
     background-image: url(../images/close.svg);
 }
+
+/*------------------------------------------------------------*/
+/* Mobile Navigation
+/*------------------------------------------------------------*/
+
+.mobile-nav-toggle  {
+	display: none;
+	width: 2rem;
+	height: 1.625rem;
+	vertical-align: middle;
+	cursor: pointer;
+	border: none;
+	position: relative;	
+	background: transparent;
+	-webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-toggle span {
+    width: 100%;
+    height: 0.25rem;
+    position: absolute;
+    transition: 0.2s linear;
+}
+
+.mobile-nav-toggle span:nth-child(1) {
+    left: 0;
+    top: 0;
+    transform: rotate(0deg);
+}
+
+.mobile-nav-toggle span:nth-child(2) {
+    left: 0;
+    top: 50%;
+    margin: -0.125rem 0 0 0;
+    opacity: 1;
+}
+
+.mobile-nav-toggle span:nth-child(3) {
+    left: 0;
+    bottom: 0;
+    transform: rotate(0deg);
+}
+
+.mobile-nav-toggle.is-active span:nth-child(1) {
+    left: 0;
+    top: 50%;  
+    margin: -0.125rem 0 0 0;
+    transform: rotate(-45deg);
+}
+
+.mobile-nav-toggle.is-active span:nth-child(2) {
+    left: 0;
+    bottom: 50%; 
+    margin: 0 0 -0.125rem 0; 
+    transform: rotate(45deg);
+    opacity: 0;   
+}
+
+.mobile-nav-toggle.is-active span:nth-child(3) {
+    left: 0;
+    bottom: 50%; 
+    margin: 0 0 -0.125rem 0; 
+    transform: rotate(45deg);
+}
+
+.mobile-nav {
+	visibility: hidden;
+	opacity: 0;
+	position: fixed;
+	z-index: 99;
+	top: 3.188rem;
+	left: 0;
+	bottom: 0;	
+	width: 100%;
+	padding: 1.5rem;	
+	overflow-y: auto;
+	will-change: opacity;
+}
+
+.mobile-nav .block {
+	margin: 0 0 1.5rem 0;
+}
+
+.mobile-menu {
+	margin: 0;
+	padding: 0;	
+	list-style: none;
+}
+
+.mobile-menu__link {
+	display: block;
+    padding: 0.5rem 0;	
+	font-size: 1.125rem;
+}
+
+
 

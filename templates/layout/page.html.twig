@@ -52,9 +52,17 @@
   {{ page.topbar }} 
 </div> 
   
-<main class="content">  
-  {{ page.content }}
+<main class="content"> 
+  {{ page.title }} 
+  <div class="content-wrapper">
+    {{ page.content }}
+    {{ page.sidebar_second }}
+  </div>
 </main>
+
+<div class="mobile-nav">
+  {{ page.mobile_nav }}
+</div>
    
 
 
