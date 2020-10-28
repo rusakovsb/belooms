@@ -14,33 +14,30 @@
     .topbar,
     .main-menu,
     .top-menu,
-    #block-copyright {
+    #block-contacts,
+    .intro__image-overlay {
         display: none;
     }
 
-    body {
-        padding: 50px 0 0 0;
+    .page {
+        padding: 3.125rem 0 0 0;
     }
 
     .header {
         width: 100%; 	
         height: auto;
-        opacity: 1;
+        padding: 0.5rem 1rem;
     } 
 
     .region-header {
-        padding: 0.5rem 1rem;
-        position: relative;
         height: auto;
         flex-direction: row;       
         align-items: center;
     }
 
-    .topbar,
-    .region-title,
     .region-content,
-    .intro__text,
-    .region-sidebar-second {
+    .featured,
+    .footer {
         padding: 1rem;
     }
 
@@ -49,26 +46,57 @@
         transform: translateX(0);
     }
 
-    .topbar, 
-    .content {
-        margin: 0;
-        opacity: 1;
+    .intro__content {    
+        align-items: flex-start;
+        height: auto;
+        padding: 0;
     }
 
-    .intro {    
-        position: relative;
-        top: auto;
-        right: auto;
-        left: 0;
-        bottom: auto;
-        align-items: flex-start;
+    .news-item,
+    .conference,
+    .project,
+    .regions-item,
+    .article,
+    .partner {
+        margin: 0 0 1.5rem 0;
+        padding: 0 0 1.5rem 0;
     }
 
     .intro__text,
     .intro__image,
-    .region-content,
-    .region-sidebar-second {
+    .news-item__title,
+    .news-item__summary,
+    .news-block-item,
+    .conference__title,
+    .conference__summary,
+    .partner__header,
+    .partner__description,
+    .article__title,
+    .article__summary,
+    .regions-item__header,
+    .regions-item__text,
+    .project__title,
+    .project__summary {
         flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .news-item__title,
+    .conference__title,
+    .partner__header,
+    .regions-item__header,
+    .article__title,    
+    .project__title {
+        padding: 0 0 1.5rem 0;
+    }
+
+    .regions-item__title,
+    .partner__title {
+        padding: 0 0 0 0.75rem;
+    }
+
+    .intro__text {
+        padding: 1rem;
     }
 
     .intro__title {
@@ -78,14 +106,26 @@
 
     .intro__slogan,
     .view__header,
+    .news-item__date,
     .conference__summary,
     .news-item__summary,
     .project__summary,
     .node__metadata,
     .node__content,
-    .partner__descr,
-    .article__summary {
+    .partner__description,
+    .article__summary,
+    .news-block-item__title,
+    .regions-item__description,
+    .regions-item__coordinator-name,
+    .regions-item__coordinator-position,
+    .regions-item__phone,
+    .regions-item__email {
         font-size: 1rem;
+    }
+
+    .view__header,
+    .page__title {
+        margin: 0 0 1.5rem 0;
     }
 
     .page__title {
@@ -98,19 +138,37 @@
 
     .conference__title,
     .news-item__title,
-    .project__title,
-    .news-block-item__title,
+    .project__title,    
     .partner__title,
-    .article__title {
+    .article__title,
+    .regions-item__title {
 	    font-size: 1.125rem;
     }
 
-    .partner__logo {
+    .partner__logo,
+    .regions-item__logo {
         flex: 0 0 2.8125rem;
     }
 
-    .partner__descr {
-        margin: 0 0 0 4.3125rem;
+    .view-news-block .view__content {    
+        margin: 0;
+    }
+    
+    .news-block-item {
+        padding: 0 0 1.5rem 0;
+        border: none;
+    }
+
+    .news-block-item:last-child {
+        padding: 0;
+    }
+
+    .node__content ul {
+        margin: 0 0 1.5rem 1rem;
+    }
+
+    .node__content ul li:before {
+        top: 0.6875rem
     }
 
 }

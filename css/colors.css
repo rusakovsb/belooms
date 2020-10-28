@@ -1,4 +1,5 @@
 body,
+.region-intro,
 .intro__image-overlay,
 .mobile-nav {
     background: #3782dd;
@@ -8,86 +9,124 @@ body,
 	background: #4b94ee;
 }
 
-.region-sidebar-second {
-	background: #2f6fbd;
+.featured {
+	background: #2b6fc2;
+}
+
+.footer {
+    background: #205ba4;
 }
 
 .header,
 .intro__text,
 .main-menu__link,
 .top-menu__link,
-.page__title,
 .button,
-.region-sidebar-second .block__title,
+.featured .block__title,
 .news-block-item__title a,
-.mobile-menu__link {
+.mobile-menu__link,
+.tabs a {
     color: #fff;
 }
 
+.page__title,
 .conference__title a,
 .news-item__title a,
 .project__title a,
 .article__title a,
-.partner__title a {
+.partner__title a,
+.node__content h2,
+.node__content h3,
+.node__content h4,
+.node__content h5,
+.node__content h6 {
     color: #000;
 }
 
-
+.news-item__date,
 .node__metadata {
-    color: #a2a8b0;
+    color: #a6a6a6;
 }
 
 .node__content a {
-    color: #2f6fbd;
+    color: #2b6fc2;
 }
 
 .node__content a:hover {
     color: #3782dd;
 }
 
-.button {
-    background: #2f6fbd;
+.button,
+.node__content ul li:before,
+.tabs a {
+    background: #2b6fc2;
 }
 
-.button:hover {
-    background: #448fea;
+.button:hover,
+.tabs a:hover {
+    background: #4b94ee;
 }
 
-.region-content,
+.main,
 .top-menu__link:after,
 .mobile-nav-toggle span {
     background: #fff;
 }
 
 .node__content,
-.partner__descr,
-.view__header {
+.view__header,
+.regions-item__description,
+.regions-item__coordinator-name,
+.regions-item__phone,
+.regions-item__email {
     color: #333;
 }
 
 .news-item__summary,
 .conference__summary,
 .project__summary,
-.article__summary {
+.article__summary,
+.partner__description,
+.regions-item__coordinator-position {
     color: #737373;
 }
 
 .news-block-item {
-	border-bottom: 2px solid #4b94ee;
+	border-right: 2px solid #4b94ee;
 }
 
 .news-block-item:last-child {
-	border-bottom: none;
+	border-right: none;
 }
 
-.news-block-item__date,
-.news-block-item__summary {
-    color: rgba(255, 255, 255, 0.85);
+.news-block-item__date {
+    color: rgba(255, 255, 255, 0.9);
 }
 
-.article__title,
-.partner__header {
+.footer,
+.footer a {
+    color: #acc6e8;
+}
+
+.news-item,
+.conference,
+.regions-item,
+.article,
+.partner {
 	border-bottom: 2px solid rgba(75, 148, 238, 0.5);
+}
+
+.node__content h2,
+.node__content h3 {
+	border-top: 2px solid rgba(75, 148, 238, 0.5);
+}
+
+.news-item:last-child,
+.conference:last-child,
+.regions-item:last-child,
+.article:last-child,
+.partner:last-child {
+	border-bottom: none;
 }
 
 .form-text,

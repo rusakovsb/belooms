@@ -22,7 +22,7 @@
     };
 
     var showContent = function() {
-        TweenMax.to(".content", 0.2, {
+        TweenMax.to(".region-content", 0.2, {
             ease: Power1.easeIn,            
             opacity: "1" 
         }); 
@@ -44,7 +44,7 @@
     };
 
     var hideContent = function() {
-        TweenMax.to(".content", 0.2, {
+        TweenMax.to(".region-content", 0.2, {
             ease: Power1.easeOut,            
             opacity: "0" 
         });           

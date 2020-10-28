@@ -51,14 +51,24 @@
 <div class="topbar">
   {{ page.topbar }} 
 </div> 
-  
-<main class="content"> 
-  {{ page.title }} 
-  <div class="content-wrapper">
-    {{ page.content }}
-    {{ page.sidebar_second }}
-  </div>
-</main>
+
+<div class="content">
+
+  <main class="main"> 
+    {{ page.content }}  
+  </main>
+
+  {% if page.featured %}
+    <div class="featured">
+      {{ page.featured }}
+    </div>
+  {% endif %}
+
+</div> 
+
+<footer class="footer">
+  {{ page.footer }}
+</footer>
 
 <div class="mobile-nav">
   {{ page.mobile_nav }}

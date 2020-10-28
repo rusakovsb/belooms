@@ -11,9 +11,9 @@ regions:
   header: 'Header' 
   topbar: 'Top Bar'
   intro: 'Intro'
-  title: 'Title'
   content: 'Content'
-  sidebar_second: 'Sidebar Second'
+  featured: 'Featured'
+  footer: 'Footer'
   mobile_nav: 'Mobile Navigation'
 
 # Information
