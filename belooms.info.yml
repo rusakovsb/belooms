@@ -10,8 +10,8 @@ libraries:
 regions:
   header: 'Header' 
   topbar: 'Top Bar'
-  intro: 'Intro'
-  content: 'Content'
+  intro: 'Intro'  
+  content: 'Content'  
   featured: 'Featured'
   footer: 'Footer'
   mobile_nav: 'Mobile Navigation'

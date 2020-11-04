@@ -5,7 +5,7 @@
             ease: Expo.easeOut,            
             x: "0" 
         });  
-        TweenMax.to( ".header, .topbar", 0.5, {
+        TweenMax.to( ".region-header, .region-topbar", 0.5, {
             ease: Power1.easeOut,            
             opacity: "1" 
         });  
@@ -35,12 +35,7 @@
             ease: Power1.easeOut, 
             delay: 0.3,           
             opacity: "1"
-        }); 
-        TweenMax.to(".intro__image-overlay", 1.5, {
-            ease: Expo.easeInOut,
-            delay: 1,
-            width: "0"
-        });      
+        });   
     };
 
     var hideContent = function() {
@@ -73,7 +68,7 @@
             dataType: "html",            
             success: function(data) {
                 setTimeout(function(){
-                    $(".content").html($(data).find(".content").html());  
+                    $(".ajax-content").html($(data).find(".ajax-content").html());  
                     showContent();              
                     document.title = ( $(data).find(".title").text() + " " + "|" + " " + "БелООМС" );                       
                     window.history.pushState(null, null, ajaxUrl);            
@@ -92,20 +87,11 @@
     $(".mobile-nav-toggle").click(function() {               
         if(!$(this).hasClass("is-active")) {  
             $(this).addClass("is-active");          
-            TweenMax.to(".mobile-nav", 0.3, {
-                ease: Power1.easeOut,
-                visibility: "visible",
-                opacity: "1"     
-            })       
+            $(".mobile-nav").fadeIn("200");     
         }
         else {      
             $(this).removeClass("is-active");      
-            TweenMax.to(".mobile-nav", 0.3, {                
-                ease: Power1.easeOut,
-                opacity: "0",
-                onComplete: function() {
-                    $(".mobile-nav").css("visibility", "hidden");
-            }});      
+            $(".mobile-nav").fadeOut("200");     
         }
     });
     

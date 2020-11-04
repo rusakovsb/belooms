@@ -1,5 +1,31 @@
 @media (max-width: 1366px) {
 
+    .news-item__title,
+    .news-item__summary,
+    .news-block-item,
+    .conference__title,
+    .conference__summary,
+    .partner__header,
+    .partner__description,
+    .article__title,
+    .article__summary,
+    .regions-item__header,
+    .regions-item__text,
+    .project__title,
+    .project__summary {
+        -ms-flex: 0 0 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .news-item__title,
+    .conference__title,
+    .partner__header,
+    .regions-item__header,
+    .article__title,    
+    .project__title {
+        padding: 0 0 1.5rem 0;
+    }
     
 }
 
@@ -35,7 +61,7 @@
         align-items: center;
     }
 
-    .region-content,
+    .main-content,
     .featured,
     .footer {
         padding: 1rem;
@@ -63,31 +89,9 @@
     }
 
     .intro__text,
-    .intro__image,
-    .news-item__title,
-    .news-item__summary,
-    .news-block-item,
-    .conference__title,
-    .conference__summary,
-    .partner__header,
-    .partner__description,
-    .article__title,
-    .article__summary,
-    .regions-item__header,
-    .regions-item__text,
-    .project__title,
-    .project__summary {
+    .intro__image {
         flex: 0 0 100%;
         max-width: 100%;
-    }
-
-    .news-item__title,
-    .conference__title,
-    .partner__header,
-    .regions-item__header,
-    .article__title,    
-    .project__title {
-        padding: 0 0 1.5rem 0;
     }
 
     .regions-item__title,
