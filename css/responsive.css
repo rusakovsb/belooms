@@ -1,3 +1,8 @@
+@media (max-width: 1600px) {}
+
+/*------------------------------------------------------------*/
+
+
 @media (max-width: 1366px) {
 
     .news-item__title,
@@ -17,16 +22,7 @@
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-    .news-item__title,
-    .conference__title,
-    .partner__header,
-    .regions-item__header,
-    .article__title,    
-    .project__title {
-        padding: 0 0 1.5rem 0;
-    }
-    
+   
 }
 
 /*------------------------------------------------------------*/
@@ -52,7 +48,6 @@
     .header {
         width: 100%; 	
         height: auto;
-        padding: 0.5rem 1rem;
     } 
 
     .region-header {
@@ -61,14 +56,7 @@
         align-items: center;
     }
 
-    .main-content,
-    .featured,
-    .footer {
-        padding: 1rem;
-    }
-
     .site-branding__logo {
-        width: 2rem;
         transform: translateX(0);
     }
 
@@ -78,38 +66,13 @@
         padding: 0;
     }
 
-    .news-item,
-    .conference,
-    .project,
-    .regions-item,
-    .article,
-    .partner {
-        margin: 0 0 1.5rem 0;
-        padding: 0 0 1.5rem 0;
-    }
-
     .intro__text,
     .intro__image {
         flex: 0 0 100%;
         max-width: 100%;
     }
 
-    .regions-item__title,
-    .partner__title {
-        padding: 0 0 0 0.75rem;
-    }
 
-    .intro__text {
-        padding: 1rem;
-    }
-
-    .intro__title {
-        margin: 0 0 1rem 0;
-        font-size: 1.75rem;
-    }
-
-    .intro__slogan,
-    .view__header,
     .news-item__date,
     .conference__summary,
     .news-item__summary,
@@ -118,57 +81,20 @@
     .node__content,
     .partner__description,
     .article__summary,
-    .news-block-item__title,
-    .regions-item__description,
-    .regions-item__coordinator-name,
-    .regions-item__coordinator-position,
-    .regions-item__phone,
-    .regions-item__email {
+    .news-block-item__title {
         font-size: 1rem;
-    }
-
-    .view__header,
-    .page__title {
-        margin: 0 0 1.5rem 0;
-    }
-
-    .page__title {
-        font-size: 1.5rem;
-    }
-
-    .block__title {
-        font-size: 1.25rem;
     }
 
     .conference__title,
     .news-item__title,
     .project__title,    
     .partner__title,
-    .article__title,
-    .regions-item__title {
+    .article__title {
 	    font-size: 1.125rem;
     }
 
-    .partner__logo,
-    .regions-item__logo {
+    .partner__logo {
         flex: 0 0 2.8125rem;
-    }
-
-    .view-news-block .view__content {    
-        margin: 0;
-    }
-    
-    .news-block-item {
-        padding: 0 0 1.5rem 0;
-        border: none;
-    }
-
-    .news-block-item:last-child {
-        padding: 0;
-    }
-
-    .node__content ul {
-        margin: 0 0 1.5rem 1rem;
     }
 
     .node__content ul li:before {

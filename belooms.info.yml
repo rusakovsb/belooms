@@ -10,7 +10,7 @@ libraries:
 regions:
   header: 'Header' 
   topbar: 'Top Bar'
-  intro: 'Intro'  
+  content_top: 'Content Top'  
   content: 'Content'  
   featured: 'Featured'
   footer: 'Footer'

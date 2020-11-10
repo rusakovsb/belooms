@@ -49,35 +49,34 @@
 </header>
 
 <div class="topbar">
-  <div class="container">
-    {{ page.topbar }} 
-  </div>
+  {{ page.topbar }} 
 </div> 
 
-<div class="ajax-content">
+<div class="content">
+
+  <div class="overlay"></div>
 
   <main class="main">
-    <div class="content"> 
-      <div class="container">     
-        {{ page.content }}
-      </div>
+    {% if page.content_top %}
+      <div class="content-top">
+        {{ page.content_top }}
+      </div> 
+    {% endif %} 
+    <div class="content-main"> 
+      {{ page.content }}
     </div>     
   </main>
 
   {% if page.featured %}     
     <div class="featured">  
-      <div class="container">    
-        {{ page.featured }}      
-      </div>
+      {{ page.featured }}      
     </div>
   {% endif %}
 
 </div> 
 
 <footer class="footer">
-  <div class="container">
     {{ page.footer }}
-  </div>
 </footer>
 
 <div class="mobile-nav">

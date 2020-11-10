@@ -5,10 +5,6 @@
             ease: Expo.easeOut,            
             x: "0" 
         });  
-        TweenMax.to( ".region-header, .region-topbar", 0.5, {
-            ease: Power1.easeOut,            
-            opacity: "1" 
-        });  
         TweenMax.staggerTo(".main-menu__item", 1, {
             ease: Power1.easeOut,
             delay: 0.2,
@@ -22,24 +18,14 @@
     };
 
     var showContent = function() {
-        TweenMax.to(".region-content", 0.2, {
+        TweenMax.to(".overlay", 0.2, {
             ease: Power1.easeIn,            
             opacity: "1" 
-        }); 
-        TweenMax.to(".intro__title", 1, {
-            ease: Power1.easeOut,
-            delay: 0.2,            
-            opacity: "1" 
-        }); 
-        TweenMax.to(".intro__slogan", 1, {
-            ease: Power1.easeOut, 
-            delay: 0.3,           
-            opacity: "1"
         });   
     };
 
     var hideContent = function() {
-        TweenMax.to(".region-content", 0.2, {
+        TweenMax.to(".overlay", 0.2, {
             ease: Power1.easeOut,            
             opacity: "0" 
         });           
@@ -68,9 +54,9 @@
             dataType: "html",            
             success: function(data) {
                 setTimeout(function(){
-                    $(".ajax-content").html($(data).find(".ajax-content").html());  
+                    $(".content").html($(data).find(".content").html());  
                     showContent();              
-                    document.title = ( $(data).find(".title").text() + " " + "|" + " " + "БелООМС" );                       
+                    document.title = ( $(data).find(".page-title").text() + " " + "|" + " " + "БелООМС" );                       
                     window.history.pushState(null, null, ajaxUrl);            
                     $(window).scrollTop(0); 
                 },200);    
