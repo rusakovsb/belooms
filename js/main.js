@@ -1,16 +1,11 @@
 (function ($) {
 
-    var showHeader = function() {
+    var showNav = function() {
         TweenMax.to( ".site-branding__logo", 1, {
             ease: Expo.easeOut,            
             x: "0" 
         });  
-        TweenMax.staggerTo(".main-menu__item", 1, {
-            ease: Power1.easeOut,
-            delay: 0.2,
-            opacity: "1"   
-        }, 0.05); 
-        TweenMax.staggerTo(".top-menu__item", 1, {
+        TweenMax.staggerTo(".main-menu__item, .top-menu__item", 1, {
             ease: Power1.easeOut,
             delay: 0.2,
             opacity: "1"   
@@ -31,10 +26,10 @@
         });           
     };
 
-    $(".main-menu a, .top-menu a, .site-branding__logo").addClass("ajax-link");
+    $(".main-menu a, .top-menu a, .footer-menu a, .site-branding__logo").addClass("ajax-link");
 
     $(window).on("load", function() { 
-        showHeader();              
+        showNav();              
         showContent();
     });
 
@@ -54,7 +49,8 @@
             dataType: "html",            
             success: function(data) {
                 setTimeout(function(){
-                    $(".content").html($(data).find(".content").html());  
+                    $(".content").html($(data).find(".content").html());
+                    $(".featured").html($(data).find(".featured").html());  
                     showContent();              
                     document.title = ( $(data).find(".page-title").text() + " " + "|" + " " + "БелООМС" );                       
                     window.history.pushState(null, null, ajaxUrl);            
@@ -68,16 +64,25 @@
         location.reload();
     };
 
-    $(".region-header").append('<button class="mobile-nav-toggle"><span></span><span></span><span></span></button>');
+    $(".region-header-right").append('<button class="mobile-nav-toggle"><span></span><span></span><span></span></button>');
 
     $(".mobile-nav-toggle").click(function() {               
         if(!$(this).hasClass("is-active")) {  
             $(this).addClass("is-active");          
-            $(".mobile-nav").fadeIn("200");     
+            $(".mobile-nav").fadeIn("200");  
+            TweenMax.staggerTo(".mobile-menu__item", 0.5, {
+                ease: Power1.easeOut,
+                delay: 0.2,
+                opacity: "1"   
+            }, 0.02);    
         }
         else {      
             $(this).removeClass("is-active");      
-            $(".mobile-nav").fadeOut("200");     
+            $(".mobile-nav").fadeOut("200"); 
+            TweenMax.to(".mobile-menu__item", 0.2, {
+                ease: Power1.easeIn,            
+                opacity: "0" 
+            });     
         }
     });
     

@@ -1,28 +1,7 @@
-@media (max-width: 1600px) {}
-
-/*------------------------------------------------------------*/
+@media (max-width: 1440px) {
 
 
-@media (max-width: 1366px) {
 
-    .news-item__title,
-    .news-item__summary,
-    .news-block-item,
-    .conference__title,
-    .conference__summary,
-    .partner__header,
-    .partner__description,
-    .article__title,
-    .article__summary,
-    .regions-item__header,
-    .regions-item__text,
-    .project__title,
-    .project__summary {
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
-        max-width: 100%;
-    }
-   
 }
 
 /*------------------------------------------------------------*/
@@ -33,72 +12,283 @@
         display: block;
     }
 
-    .topbar,
-    .main-menu,
+    .overlay,
+    .sidebar-first,
     .top-menu,
-    #block-contacts,
-    .intro__image-overlay {
+    .header .button,
+    .about__image:before,
+    .footer-menu__link:after {
         display: none;
     }
 
-    .page {
-        padding: 3.125rem 0 0 0;
+    .region-footer-second .block:last-child,
+    .footer-menu__item {
+        margin: 0;
     }
 
-    .header {
-        width: 100%; 	
-        height: auto;
-    } 
-
-    .region-header {
-        height: auto;
-        flex-direction: row;       
-        align-items: center;
-    }
-
-    .site-branding__logo {
-        transform: translateX(0);
-    }
-
-    .intro__content {    
-        align-items: flex-start;
-        height: auto;
+    .header-left,
+    .header-right,
+    .page-header__image,
+    .region-featured,
+    .view-about .view__content,
+    .view-join .view__content,
+    .region-content,
+    .view-purposes-block .view__header,
+    .view-objectives-block .view__header,
+    .partner__header,
+    .node__content,
+    .specialist__header,
+    .footer-first,
+    .footer-second {
         padding: 0;
     }
 
-    .intro__text,
-    .intro__image {
+    .header {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        right: 0;
+        left: 0;        
+        padding: 0.75rem 1rem;
+        padding: 3vw 4vw;
+    }
+
+    .content-top {
+        padding: 4.5rem 0 0 0;
+        padding: 16vw 0 0 0;
+    }
+
+    .featured,
+    .content-main,
+    .footer {
+        padding: 2rem 1rem;
+        padding: 8vw 4vw;
+    }
+
+    .about__text {
+        padding: 1rem 0 0 0;
+        padding: 4vw 0 0 0;
+    }
+
+    .page-header__summary {
+        padding: 1rem;
+        padding: 4vw;
+    }
+
+    .site-branding__logo {
+        width: 2rem;
+        width: 8vw;
+        transform: translateX(0);
+    }
+
+    .block-page-title-block {    
+        padding: 0 1rem 1rem 1rem;
+        padding: 0 4vw 4vw 4vw;
+    }
+
+    .page-header:before {
+        background: #fff;
+        bottom: 0;
+    }
+
+    .page-header__summary {
+        position: relative;;
+        z-index: 2;
+        right: 0;
+        bottom: auto;
+        width: auto;
+        margin: -2rem 0 0 1rem;
+        margin: -8vw 0 0 4vw;
+    }
+
+    .page-subtitle,
+    .form-text,
+    .form-email {
+        width: 100%;
+    }
+
+    .content,
+    .view-purposes-block .view__header,
+    .view-purposes-block .view__content,
+    .view-objectives-block .view__header,
+    .view-objectives-block .view__content,
+    .about__image,
+    .about__text,
+    .project__image,
+    .project__text,
+    .articles-block-item,
+    .article,
+    .project,
+    .partner__header,
+    .specialist__header,
+    .specialist__description,
+    .partner__description,
+    .region-footer-second .block {
+        -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
     }
-
-
-    .news-item__date,
-    .conference__summary,
-    .news-item__summary,
-    .project__summary,
-    .node__metadata,
-    .node__content,
-    .partner__description,
-    .article__summary,
-    .news-block-item__title {
-        font-size: 1rem;
+    
+    .page-subtitle,
+    .block-title,
+    .view__title,
+    .view__subtitle,
+    .partner__header,
+    .specialist__position,
+    .specialist__name,
+    .purposes-list__item,
+    .node__content p,
+    .node__content ul li,
+    .partner__description p,
+    .specialist__description p,
+    .node__content h2,
+    .form__item,
+    .file,
+    .qa__question {
+        margin: 0 0 1rem 0;
+        margin: 0 0 4vw 0;
     }
 
-    .conference__title,
-    .news-item__title,
-    .project__title,    
-    .partner__title,
-    .article__title {
-	    font-size: 1.125rem;
+    .project__text-inner,
+    .articles-block-item__title,
+    .article__title,
+    .project__title {
+        margin: -2rem 1rem 0 0;
+        margin: -8vw 4vw 0 0;
+        padding: 1rem 1rem 0 0;
+        padding: 4vw 4vw 0 0;
+    }
+
+    .featured .block, 
+    .content-main .block,
+    .region-footer-first,
+    .region-footer-second .block,
+    .articles-block-item,
+    .articles,
+    .project,
+    .partner,
+    .qa {
+        margin: 0 0 2rem 0;
+        margin: 0 0 8vw 0;
+    }
+
+    .qa__answer {
+        margin: 0 0 0 1rem;
+        margin: 0 0 0 4vw;
+    }
+
+    .about__button {
+        margin: 2rem 0 0 0;
+        margin: 4vw 0 0 0;
+    }
+
+    .view-documents__title {
+        margin: 2rem 0 1rem 0;
+        margin: 8vw 0 4vw 0;
+    }
+
+    .purposes-list__item,
+    .node__content ul li {
+        padding: 0 0 0 2rem;
+        padding: 0 0 0 8vw;
+    }
+
+    .node__content ul li:before {
+        top: 0.65em;
     }
 
     .partner__logo {
         flex: 0 0 2.8125rem;
+        max-width: 2.8125rem;
     }
 
-    .node__content ul li:before {
-        top: 0.6875rem
+    .footer-menu {
+        flex-direction: column;
+    }
+
+    .file--x-office-document a, 
+    .file--application-pdf a {
+        min-height: 1.25rem;
+        min-height: 5.333vw;
+        background-size: auto 1.25rem;
+        background-size: auto 5.333vw;
+        padding: 0 0 0 1.75rem;
+        padding: 0 0 0 7.467vw;
+    }
+
+    .node__content ul {
+        margin: 0 0 1rem 1rem;
+        margin: 0 0 4vw 4vw;
+    }
+    
+    .qa__question,
+    .qa__answer,
+    .partner__title {
+        padding: 0 0 0 1rem;
+        padding: 0 0 0 4vw;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+        font-size: 6.4vw;
+    }
+
+    .block-title,
+    .view__title,
+    .node__content h2,
+    .mobile-menu__link {
+        font-size: 1.375rem;
+        font-size: 5.867vw;
+    }
+
+    .page-subtitle,
+    .view__subtitle,    
+    .conference__title,
+    .news-item__title,
+    .project__title,    
+    .partner__title,
+    .articles-block-item__title,
+    .article__title,
+    .specialist__position,
+    .specialist__name,
+    .view-documents__title {
+        font-size: 1.25rem;
+        font-size: 5.333vw;
+    }
+
+    .node__content h3, 
+    .node__content h4, 
+    .node__content h5, 
+    .node__content h6 {
+        font-size: 1.125rem;
+        font-size: 4.8vw;
+    }
+
+    .page-header__summary,
+    .news-item__date,
+    .about__body,
+    .purposes-list__item,
+    .conference__summary,
+    .news-item__summary,
+    .project__summary,
+    .partner__description,
+    .specialist__description,
+    .article__summary,
+    .news-block-item__title,
+    .node__content,
+    .form__label,
+    .button,
+    .file,
+    .qa__question-name,
+    .qa__answer-label,
+    .qa__question-text,
+    .qa__answer-text,
+    .region-footer-first,
+    .region-footer-second,
+    .top-menu__link,
+    .footer-menu__link {
+        font-size: 1rem;
+        font-size: 4.267vw;
     }
 
 }

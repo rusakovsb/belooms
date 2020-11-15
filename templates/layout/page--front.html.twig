@@ -45,40 +45,42 @@
 #}
 
 <header class="header">
-  {{ page.header }}
+  <div class="header-left">
+    {{ page.header_left }}
+  </div>
+  <div class="header-right">
+    {{ page.header_right }}
+  </div>
 </header>
 
-<div class="topbar">
-  {{ page.topbar }} 
-</div> 
+<div class="main-wrapper">    
 
-<div class="content">
+  <div class="sidebar-first">
+    {{ page.sidebar_first }} 
+  </div> 
 
-  <div class="overlay"></div>
-
-  <main class="main">
+  <main class="content">
+    <div class="overlay"></div>
     <div class="content-top">
       {{ page.content_top }}
     </div> 
   </main>
 
-  {% if page.featured %}     
-    <div class="featured">  
-      {{ page.featured }}      
-    </div>
-  {% endif %}
-
 </div> 
 
+<div class="featured">  
+  {{ page.featured }}      
+</div>
+
 <footer class="footer">
-    {{ page.footer }}
+  <div class="footer-first">
+    {{ page.footer_first }}
+  </div>
+  <div class="footer-second">
+    {{ page.footer_second }}
+  </div>
 </footer>
 
 <div class="mobile-nav">
   {{ page.mobile_nav }}
 </div>
-
-
-
-
-
