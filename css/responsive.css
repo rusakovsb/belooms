@@ -12,12 +12,12 @@
         display: block;
     }
 
-    .overlay,
     .sidebar-first,
     .top-menu,
     .header .button,
-    .about__image:before,
-    .footer-menu__link:after {
+    .footer-menu__link:after,
+    .footer:before,
+    .footer:after {
         display: none;
     }
 
@@ -30,13 +30,10 @@
     .header-right,
     .page-header__image,
     .region-featured,
-    .view-about .view__content,
-    .view-join .view__content,
     .region-content,
     .view-purposes-block .view__header,
     .view-objectives-block .view__header,
     .partner__header,
-    .node__content,
     .specialist__header,
     .footer-first,
     .footer-second {
@@ -53,11 +50,6 @@
         padding: 3vw 4vw;
     }
 
-    .content-top {
-        padding: 4.5rem 0 0 0;
-        padding: 16vw 0 0 0;
-    }
-
     .featured,
     .content-main,
     .footer {
@@ -65,9 +57,53 @@
         padding: 8vw 4vw;
     }
 
-    .about__text {
-        padding: 1rem 0 0 0;
-        padding: 4vw 0 0 0;
+    .about,
+    .join {    
+        padding: 0;
+    }
+
+    .about__text,
+    .join__text {
+        padding: 2rem 0;
+        padding: 8vw 0;
+    }
+
+    #block-views-block-page-files-block-1 {
+        padding: 0 0 1rem 0;
+        padding: 0 0 4vw 0;
+    }
+
+    .about__text:before,
+    .join__text:before {
+        z-index: 1;
+        top: 0;
+        right: -1rem;
+        right: -4vw;
+        bottom: -2rem;
+        bottom: -8vw;
+        left: -1rem;
+        left: -4vw;
+    }
+
+    .about__image,
+    .join__image {
+        z-index: 2;
+        position: relative;
+        padding: 70% 0 0 0;
+    }
+
+    .about__image,
+    .join__image {
+        top: auto;
+        right: auto;
+        left: auto;
+        bottom: auto;
+        margin: 0;
+    }
+
+    .join {
+        display: flex;
+        flex-direction: column-reverse;
     }
 
     .page-header__summary {
@@ -82,23 +118,16 @@
     }
 
     .block-page-title-block {    
-        padding: 0 1rem 1rem 1rem;
-        padding: 0 4vw 4vw 4vw;
-    }
-
-    .page-header:before {
-        background: #fff;
-        bottom: 0;
+        padding: 4.5rem 1rem 1rem 1rem;
+        padding: 20vw 4vw 4vw 4vw;
     }
 
     .page-header__summary {
         position: relative;;
-        z-index: 2;
-        right: 0;
+        right: auto;
         bottom: auto;
         width: auto;
-        margin: -2rem 0 0 1rem;
-        margin: -8vw 0 0 4vw;
+        margin: 0;
     }
 
     .page-subtitle,
@@ -112,16 +141,16 @@
     .view-purposes-block .view__content,
     .view-objectives-block .view__header,
     .view-objectives-block .view__content,
-    .about__image,
-    .about__text,
     .project__image,
     .project__text,
     .articles-block-item,
     .article,
     .project,
+    .conference,
     .partner__header,
     .specialist__header,
     .specialist__description,
+    .partners-block-item,
     .partner__description,
     .region-footer-second .block {
         -ms-flex: 0 0 100%;
@@ -133,6 +162,9 @@
     .block-title,
     .view__title,
     .view__subtitle,
+    .about__body, 
+    .join__body,
+    .partners-block-item,
     .partner__header,
     .specialist__position,
     .specialist__name,
@@ -144,30 +176,32 @@
     .node__content h2,
     .form__item,
     .file,
-    .qa__question {
+    .qa__question,
+    #block-views-block-page-files-block-1 {
         margin: 0 0 1rem 0;
         margin: 0 0 4vw 0;
     }
 
-    .project__text-inner,
     .articles-block-item__title,
     .article__title,
     .project__title {
-        margin: -2rem 1rem 0 0;
-        margin: -8vw 4vw 0 0;
-        padding: 1rem 1rem 0 0;
-        padding: 4vw 4vw 0 0;
+        margin: -2rem 2rem 0 0;
+        margin: -8vw 8vw 0 0;
+        padding: 1rem 1rem 1rem 0;
+        padding: 4vw 4vw 4vw 0;
     }
 
-    .featured .block, 
     .content-main .block,
     .region-footer-first,
     .region-footer-second .block,
     .articles-block-item,
-    .articles,
-    .project,
+    .article__summary,
+    .article:nth-last-child(2) .article__summary, 
+    .project__summary,
+    .project:nth-last-child(2) .project__summary,
     .partner,
-    .qa {
+    .qa,
+    .specialist {
         margin: 0 0 2rem 0;
         margin: 0 0 8vw 0;
     }
@@ -177,26 +211,12 @@
         margin: 0 0 0 4vw;
     }
 
-    .about__button {
-        margin: 2rem 0 0 0;
-        margin: 4vw 0 0 0;
-    }
-
     .view-documents__title {
         margin: 2rem 0 1rem 0;
         margin: 8vw 0 4vw 0;
     }
 
-    .purposes-list__item,
-    .node__content ul li {
-        padding: 0 0 0 2rem;
-        padding: 0 0 0 8vw;
-    }
-
-    .node__content ul li:before {
-        top: 0.65em;
-    }
-
+    .partners-block-item__logo,
     .partner__logo {
         flex: 0 0 2.8125rem;
         max-width: 2.8125rem;
@@ -221,8 +241,7 @@
         margin: 0 0 4vw 4vw;
     }
     
-    .qa__question,
-    .qa__answer,
+    .partners-block-item__title,
     .partner__title {
         padding: 0 0 0 1rem;
         padding: 0 0 0 4vw;
@@ -243,9 +262,10 @@
 
     .page-subtitle,
     .view__subtitle,    
+    .view__description,
     .conference__title,
     .news-item__title,
-    .project__title,    
+    .project__title,   
     .partner__title,
     .articles-block-item__title,
     .article__title,
@@ -264,9 +284,10 @@
         font-size: 4.8vw;
     }
 
-    .page-header__summary,
+    .page-header__summary,    
     .news-item__date,
     .about__body,
+    .join__body,
     .purposes-list__item,
     .conference__summary,
     .news-item__summary,
@@ -274,6 +295,7 @@
     .partner__description,
     .specialist__description,
     .article__summary,
+    .partners-block-item__title,
     .news-block-item__title,
     .node__content,
     .form__label,

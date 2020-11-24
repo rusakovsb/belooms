@@ -1,7 +1,6 @@
-.header,
+body,
 .sidebar-first,
-.content-top,
-.page-header:before,
+.header,
 .mobile-nav,
 .purposes-list__item:before,
 .node__content ul li:before {
@@ -9,15 +8,20 @@
 }
 
 .page-header__summary,
-.about__image:before,
+.about__text:before,
+.join__text:before,
+.footer:before,
 .footer {
     background: #1c5088;
 }
 
-body,
+.page-header:before,
 .project__text-inner,
-.region-content,
+.content-main:before,
+.content-bg,
+.featured,
 .region-featured,
+.region-content,
 .main-menu__link:before,
 .top-menu__link:after,
 .footer-menu__link:after,
@@ -34,6 +38,9 @@ body,
 .footer-menu__link,
 .page-title,
 .page-header__summary,
+.view__title_white,
+.about__body,
+.join__body,
 .button,
 .mobile-menu__link,
 .tabs a,
@@ -42,8 +49,15 @@ body,
     color: #fff;
 }
 
-.title,
-.title a,
+.block-title,
+.page-subtitle,
+.view__title_grey,
+.view-documents__title,
+.view__link_grey,
+.qa__question-name,
+.qa__answer-label,
+.specialist__position,
+.specialist__name,
 .node__content h2,
 .node__content h3,
 .node__content h4,
@@ -76,11 +90,15 @@ body,
 
 .button--secondary {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid #3a88dd;
 }
 
 .button--secondary:hover {
-    border: 1px solid rgba(255, 255, 255, 1);
+    border: 2px solid #fff;
+}
+
+.header .button--secondary {
+    border: 2px solid #fff;
 }
 
 .node__content,
@@ -94,16 +112,22 @@ body,
     color: #414448;
 }
 
-.view__subtitle,
-.about__body,
-.news-item__summary,
-.conference__summary,
-.project__summary,
-.article__summary,
+.view__description,
 .partner__description,
 .specialist__description,
 .form__label {
     color: #56595c;
+}
+
+.view__subtitle {
+    color: #a3a7ab;
+}
+
+.news-item__summary,
+.conference__summary,
+.project__summary,
+.article__summary {
+    color: #818589;
 }
 
 .news-block-item:last-child {
@@ -116,16 +140,8 @@ body,
     color: #3a88dd;
 }
 
-.news-block-item__date {
-    border-right: 2px solid #3a88dd;
-}
-
-.qa__question {    
-    border-left: 2px solid #3a88dd;
-}
-
-.qa__answer {
-    border-left: 2px solid #359c4d;
+.block-views-blockpage-files-block-1 {
+    border-bottom: 2px solid #3a88dd;
 }
 
 .form__label_required:after {
