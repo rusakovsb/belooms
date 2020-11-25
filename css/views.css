@@ -335,9 +335,9 @@
 }
 
 .partners-block-item__logo {
-    -ms-flex: 0 0 5.625rem;
-    flex: 0 0 5.625rem;
-    max-width: 5.625rem;
+    -ms-flex: 0 0 21.09%;
+    flex: 0 0 21.09%;
+    max-width: 21.09%;
 }
 
 .partners-block-item__title {
@@ -587,9 +587,9 @@
 }
 
 .partner__logo {
-    -ms-flex: 0 0 5.625rem;
-    flex: 0 0 5.625rem;
-    max-width: 5.625rem;
+    -ms-flex: 0 0 14.06%;
+    flex: 0 0 14.06%;
+    max-width: 14.06%;
 }
 
 .partner__title {

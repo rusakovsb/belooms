@@ -174,7 +174,7 @@ footer {
 	padding: 3rem 3rem 0 3rem;
 	padding: 2.5vw 2.5vw 0 2.5vw;
 	position: relative;
-	z-index: 200;
+	z-index: 10;
 }
 
 .sidebar-first .block,
@@ -201,12 +201,13 @@ footer {
 .content-main {
 	position: relative;
 	padding: 0 3rem 0 0;
-	padding: 0 2.5vw 0 0;
+	padding: 0 2.5vw 0 0;	
 }
 
 .region-content {
 	position: relative;
 	z-index: 10;
+	opacity: 0;
 }
 
 .region-content .block:last-child {
