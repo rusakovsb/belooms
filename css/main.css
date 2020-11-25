@@ -183,7 +183,6 @@ footer {
 	margin: 0 0 5vw 0;
 }
 
-.featured .block:last-child,
 .content-main .block:last-child {
 	margin: 0;
 }
@@ -215,13 +214,11 @@ footer {
 }
 
 .region-content,
-.region-featured,
 .footer-first {
 	padding: 6rem;
 	padding: 5vw;
 }
 
-.featured,
 .footer {
 	padding: 0 3rem 0 15%;
 	padding: 0 2.5vw 0 15vw;

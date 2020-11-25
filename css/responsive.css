@@ -21,7 +21,6 @@
     .header-left,
     .header-right,
     .page-header__image,
-    .region-featured,
     .region-content,
     .view-purposes-block .view__header,
     .view-objectives-block .view__header,
@@ -42,7 +41,6 @@
         padding: 3vw 4vw;
     }
 
-    .featured,
     .content-main,
     .footer {
         padding: 2rem 1rem;
