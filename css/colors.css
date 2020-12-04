@@ -2,26 +2,26 @@ body,
 .sidebar-first,
 .header,
 .mobile-nav,
-.purposes-list__item:before,
-.node__content ul li:before {
+.purposes-list__item::before,
+.node__content ul li::before {
     background: #3a88dd;
 }
 
 .page-header__summary,
-.about__text:before,
-.join__text:before,
-.footer:before,
+.about__text::before,
+.join__text::before,
+.footer::before,
 .footer {
     background: #1c5088;
 }
 
-.page-header:before,
+.page-header::before,
 .project__text-inner,
-.content-main:before,
-.region-content,
-.main-menu__link:before,
-.top-menu__link:after,
-.footer-menu__link:after,
+.content-main::before,
+.region-content-main,
+.main-menu__link::before,
+.top-menu__link::after,
+.footer-menu__link::after,
 .mobile-nav-toggle span,
 .articles-block-item__title,
 .article__title,
@@ -75,26 +75,28 @@ body,
     color: #1c5088;
 }
 
-.button--primary,
+.form-submit,
 .tabs a {
     background: #3a88dd;
 }
 
-.button--primary:hover,
+.form-submit:hover,
 .tabs a:hover {
     background: #1c5088;
 }
 
-.button--secondary {
+.button_border-blue {
     background: transparent;
     border: 2px solid #3a88dd;
 }
 
-.button--secondary:hover {
+.button_border-blue:hover {
+    background: transparent;
     border: 2px solid #fff;
 }
 
-.header .button--secondary {
+.button_border-white {
+    background: transparent;
     border: 2px solid #fff;
 }
 
@@ -116,10 +118,7 @@ body,
     color: #56595c;
 }
 
-.view__subtitle {
-    color: #a3a7ab;
-}
-
+.view__subtitle,
 .news-item__summary,
 .conference__summary,
 .project__summary,
@@ -137,11 +136,15 @@ body,
     color: #3a88dd;
 }
 
-.block-views-blockpage-files-block-1 {
+.block_border-bottom {
     border-bottom: 2px solid #3a88dd;
 }
 
-.form__label_required:after {
+.qa__answer {
+    border-left: 2px solid #3a88dd;
+}
+
+.form__label_required::after {
     color: #cc3131;  
 }
 
@@ -168,8 +171,8 @@ body,
     color: #1f934a;
 }
 
-.messages_status:before, 
-.webform-confirmation__message:before {
+.messages_status::before, 
+.webform-confirmation__message::before {
     background-color: #1f934a;  
 }
 
@@ -178,7 +181,7 @@ body,
     background: rgba(204, 49, 49, 0.1);
 }
 
-.messages_error:before {
+.messages_error::before {
     background-color: #cc3131;  
 }
 

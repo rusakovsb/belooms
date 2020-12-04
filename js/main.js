@@ -26,7 +26,7 @@
                 y: "0" 
             }); 
         });
-        TweenMax.to( ".region-content", 1, {
+        TweenMax.to( ".region-content-main", 1, {
             ease: Expo.easeOut,   
             opacity: "1"
         }); 
