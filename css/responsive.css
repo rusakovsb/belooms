@@ -17,15 +17,17 @@
     .article__summary,
     .news-item__summary,
     .node__content,
+    .сontacts__data,
     .file,
     .qa__question-name,
     .qa__answer-label,
     .specialist__description,
     .form__label,
     .button,
+    .region-footer-second,
     .footer-menu__item {
         font-size: 1rem;
-        font-size: 1.250vw;
+        font-size: 1.25vw;
     }
 
 }
@@ -150,10 +152,13 @@
     .view-purposes-block .view__content,
     .view-objectives-block .view__header,
     .view-objectives-block .view__content,
+    .сontacts__text,
+    .сontacts__map,
     .project__image,
     .project__text,
     .articles-block-item,
     .article,
+    .news-item,
     .project,
     .conference,
     .partner__header,
@@ -173,6 +178,7 @@
     .view__subtitle,
     .about__body, 
     .join__body,
+    .news-item__date,
     .partners-block-item,
     .partner__header,
     .specialist__position,
@@ -183,6 +189,7 @@
     .partner__description p,
     .specialist__description p,
     .node__content h2,
+    .сontacts__data,
     .form__item,
     .file,
     .qa__question,
@@ -193,7 +200,8 @@
 
     .articles-block-item__title,
     .article__title,
-    .project__title {
+    .project__title,
+    .news-item__text {
         margin: -2rem 2rem 0 0;
         margin: -8vw 8vw 0 0;
         padding: 1rem 1rem 1rem 0;
@@ -207,6 +215,8 @@
     .articles-block-item,
     .article__summary,
     .article:nth-last-child(2) .article__summary, 
+    .news-item__summary,
+    .news-item:nth-last-child(2) .news-item__summary,
     .project__summary,
     .project:nth-last-child(2) .project__summary,
     .partner,
@@ -287,6 +297,7 @@
     .partner__title,
     .articles-block-item__title,
     .article__title,
+    .news-item__title,
     .specialist__position,
     .specialist__name,
     .view-documents__title {
@@ -297,7 +308,8 @@
     .node__content h3, 
     .node__content h4, 
     .node__content h5, 
-    .node__content h6 {
+    .node__content h6,
+    .сontacts__title {
         font-size: 1.125rem;
         font-size: 4.8vw;
     }
@@ -310,12 +322,15 @@
     .conference__summary,
     .news-item__summary,
     .project__summary,
+    .news-item__date,
     .partner__description,
     .specialist__description,
     .article__summary,
+    .news-item__summary,
     .partners-block-item__title,
     .news-block-item__title,
     .node__content,
+    .сontacts__data,
     .form__label,
     .button,
     .file,

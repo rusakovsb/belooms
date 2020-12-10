@@ -3,7 +3,9 @@ body,
 .header,
 .mobile-nav,
 .purposes-list__item::before,
-.node__content ul li::before {
+.node__content ul li::before,
+.form-submit,
+.tabs a {
     background: #3a88dd;
 }
 
@@ -11,7 +13,9 @@ body,
 .about__text::before,
 .join__text::before,
 .footer::before,
-.footer {
+.footer,
+.form-submit:hover,
+.tabs a:hover {
     background: #1c5088;
 }
 
@@ -25,6 +29,7 @@ body,
 .mobile-nav-toggle span,
 .articles-block-item__title,
 .article__title,
+.news-item__text,
 .project__title {
     background: #fff;
 }
@@ -53,6 +58,7 @@ body,
 .view__link_grey,
 .qa__question-name,
 .qa__answer-label,
+.сontacts__title,
 .specialist__position,
 .specialist__name,
 .node__content h2,
@@ -64,6 +70,7 @@ body,
 }
 
 .node__content a,
+.news-item__date,
 .file a,
 .specialist__description a {
     color: #3a88dd;
@@ -73,16 +80,6 @@ body,
 .file a:hover,
 .specialist__description a:hover {
     color: #1c5088;
-}
-
-.form-submit,
-.tabs a {
-    background: #3a88dd;
-}
-
-.form-submit:hover,
-.tabs a:hover {
-    background: #1c5088;
 }
 
 .button_border-blue {
@@ -103,6 +100,7 @@ body,
 .node__content,
 .purposes-list__item,
 .objectives-list__item,
+.сontacts__data,
 .form-text,
 .form-email,
 .form-textarea,
