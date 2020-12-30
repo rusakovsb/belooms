@@ -86,18 +86,16 @@
 }
 
 /*------------------------------------------------------------*/
-/* About, Join
+/* About
 /*------------------------------------------------------------*/
 
-.about,
-.join {    
+.about {    
     position: relative;
     padding: 6rem 0 0 50%;
     padding: 5vw 0 0 50%;
 }
 
-.about__image,
-.join__image {
+.about__image {
     z-index: 1;
     top: 0;
     right: 50%;
@@ -111,15 +109,13 @@
     background-repeat: no-repeat;
 }
 
-.about__text,
-.join__text {
+.about__text {
     position: relative;
     padding: 6rem 6rem 6rem 0;
     padding: 5vw 5vw 5vw 0;
 }
 
-.about__text::before,
-.join__text::before {
+.about__text::before {
     content: "";
     display: block;
     position: absolute;
@@ -131,8 +127,7 @@
     left: -5vw;
 }
 
-.about__body,
-.join__body {	
+.about__body {	
     margin: 0 0 2rem 0;
     margin: 0 0 1.667vw 0;
     font-size: 1.25rem;
@@ -141,8 +136,7 @@
 	line-height: 1.5;
 }
 
-.about__text-inner,
-.join__text-inner {
+.about__text-inner {
     position: relative;
     z-index: 3;
 }
@@ -198,8 +192,9 @@
 	display: block;
 	top: 0.6em;
 	left: 0;
-	width: 0.25em;
-	height: 0.25em;
+	width: 5px;
+    height: 5px;
+    border-radius: 50%;
 }
 
 .purposes-list__item:last-child {  

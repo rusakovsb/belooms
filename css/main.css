@@ -56,9 +56,11 @@
 /* Base Styles
 /*------------------------------------------------------------*/
 
-* {  
-	box-sizing: border-box;   
-	outline: none;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    outline: none !important;
 }
 
 html {
@@ -98,7 +100,6 @@ img {
 /* Layout
 /*------------------------------------------------------------*/
 
-header,
 nav,
 section,
 main,
@@ -280,29 +281,29 @@ footer {
 .main-menu__link {
     position: relative;
 	display: inline-block;
-	padding: 0.375em 0;
-	padding: 0.313vw 0;
+	padding: 0.25em 0;
 }
 
-.main-menu__link::before {
+.main-menu__link::after {
     content: "";
-	position: absolute;
-	display: block;
+    position: absolute;
 	top: 50%;
-	left: -1.5rem;
+	left: -1.25rem;
 	left: -1.25vw;
-	width: 0.25em;
-	height: 0.25em;
-	margin: -0.125em 0 0 -0.125em;
-	opacity: 0;	
+	margin: -2px 0 0 -2px;
+    display: block;
+    width: 4px;
+    height: 4px;
+	opacity: 0;
+	border-radius: 50%;
     transition: 0.2s ease-out;
 }
 
-.main-menu__link:hover::before {
+.main-menu__link:hover::after {
 	opacity: 0.5;
 }
 
-.main-menu__link.is-active::before {
+.main-menu__link.is-active::after {
 	opacity: 1;
 }
 
@@ -499,10 +500,11 @@ footer {
     content: "";
 	position: absolute;
 	display: block;
-	top: 0.65em;
+	top: 0.6em;
 	left: 0;
-	width: 0.25em;
-	height: 0.25em;
+	width: 5px;
+    height: 5px;
+    border-radius: 50%;
 }
 
 /*------------------------------------------------------------*/
@@ -544,11 +546,6 @@ footer {
 /* Forms, Buttons
 /*------------------------------------------------------------*/
 
-.form__item {
-	margin: 0 0 2rem 0;	
-    margin: 0 0 1.667vw 0;
-}
-
 .form__label {
 	display: block;
 	margin: 0 0 0.25em 0;
@@ -563,23 +560,19 @@ footer {
 	margin: 0 0 0 0.25em;
 }
 
-.form-text,
-.form-email,
-.form-textarea {
+.form__input,
+.form__textarea {
+	display: block;
 	padding: 0.5em;
 	font-family: 'ProximaNova';
 	font-size: 1.125rem;
 	font-weight: 400;
 	transition: 0.2s ease-out;	
-}
-
-.form-text,
-.form-email {
-	width: 50%;	
-}
-
-.form-textarea {
 	width: 100%;
+}
+
+.form__textarea {
+	height: 14em;
 }
 
 .button {
@@ -615,11 +608,45 @@ footer {
 	background-repeat: no-repeat;
 }
 
+.webform-submission-form {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.form__col {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+	max-width: 50%;
+}
+
+.form__col-1 {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding: 0 3rem 0 0;
+    padding: 0 2.5vw 0 0;
+}
+
+.form-actions {
+    margin: 2rem 0 0 0;
+	margin: 1.667vw 0 0 0;
+	padding: 0 0 0 50%;
+}
+
+.form-submit {
+	padding: 0.8em 1.6em;
+}
+
 /*------------------------------------------------------------*/
 /* Footer
 /*------------------------------------------------------------*/
 
-.footer:before {
+.footer::before {
     content: "";
     display: block;
     position: absolute;

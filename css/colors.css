@@ -23,7 +23,7 @@ body,
 .project__text-inner,
 .content-main::before,
 .region-content-main,
-.main-menu__link::before,
+.main-menu__link::after,
 .top-menu__link::after,
 .footer-menu__link::after,
 .mobile-nav-toggle span,
@@ -146,16 +146,14 @@ body,
     color: #cc3131;  
 }
 
-.form-text,
-.form-email,
-.form-textarea {
-    border: 1px solid rgba(0, 0, 0, 0.2);
+.form__input,
+.form__textarea {
+    border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
-.form-text:focus,
-.form-email:focus,
-.form-textarea:focus {
-	border: 1px solid rgba(0, 0, 0, 0.4);
+.form__input:focus,
+.form__textarea:focus {
+	border: 2px solid rgba(0, 0, 0, 0.2);
 }
 
 .messages_status,

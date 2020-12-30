@@ -21,8 +21,12 @@
     .file,
     .qa__question-name,
     .qa__answer-label,
+    .qa__question-text, 
+    .qa__answer-text,
     .specialist__description,
     .form__label,
+    .form__input,
+    .form__textarea,
     .button,
     .region-footer-second,
     .footer-menu__item {
@@ -50,7 +54,8 @@
     }
 
     .region-footer-second .block:last-child,
-    .footer-menu__item {
+    .footer-menu__item,
+    .form-actions {
         margin: 0;
     }
 
@@ -63,7 +68,9 @@
     .partner__header,
     .specialist__header,
     .footer-first,
-    .footer-second {
+    .footer-second,
+    .form__col-1,
+    .form-actions {
         padding: 0;
     }
 
@@ -166,7 +173,8 @@
     .specialist__description,
     .partners-block-item,
     .partner__description,
-    .region-footer-second .block {
+    .region-footer-second .block,
+    .form__col {
         -ms-flex: 0 0 100%;
         flex: 0 0 100%;
         max-width: 100%;
@@ -270,7 +278,8 @@
     }
     
     .partners-block-item__title,
-    .partner__title {
+    .partner__title,
+    .qa__answer {
         padding: 0 0 0 1rem;
         padding: 0 0 0 4vw;
     }
@@ -332,11 +341,13 @@
     .node__content,
     .сontacts__data,
     .form__label,
+    .form__input,
+    .form__textarea,
     .button,
     .file,
     .qa__question-name,
     .qa__answer-label,
-    .qa__question-text,
+    .qa__question-text, 
     .qa__answer-text,
     .region-footer-first,
     .region-footer-second,    

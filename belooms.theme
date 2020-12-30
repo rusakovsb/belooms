@@ -23,5 +23,3 @@ function belooms_preprocess_maintenance_page(&$variables) {
   // Custom styling for the maintenance page.
   $variables['#attached']['library'][] = 'belooms/maintenance_page';
 }
-
-

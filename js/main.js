@@ -30,10 +30,12 @@
             ease: Expo.easeOut,   
             opacity: "1"
         }); 
-        $(".about__image, .join__image").each(function() {
+        $(".about__image").each(function() {
             var imgUrl = $(this).attr("data-image-src");
             $(this).css("background-image", "url("+imgUrl+")");      
         });
+        $(".form__item_question-name, .form__item_question-email, .form__item_question-phone").wrapAll('<div class="form__col form__col-1"></div>');
+        $(".form__item_question-text").wrap('<div class="form__col form__col-2"></div>');
     };
 
     var hideContent = function() {        
