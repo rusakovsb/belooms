@@ -1,0 +1,19 @@
+name: BelOOMS
+type: theme
+description: 'Theme for BelOOMS'
+core_version_requirement: ^8 || ^9
+base theme: false
+
+libraries:
+  - belooms/global-styling
+
+regions:
+  header_left: 'Header Left' 
+  header_right: 'Header Right'
+  sidebar_first: 'Sidebar First'
+  title: 'Title'
+  hero: 'Hero'  
+  content: 'Content'
+  footer_first: 'Footer First'
+  footer_second: 'Footer Second'
+  mobile_nav: 'Mobile Navigation'

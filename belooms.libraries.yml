@@ -1,0 +1,16 @@
+global-styling:
+  css:
+    theme:
+      css/main.css: {}
+      css/views.css: {}
+      css/responsive.css: {}
+  js:   
+    js/gsap.min.js: {}
+    js/jquery.lettering.js: {}
+    js/ScrollTrigger.min.js: {}
+    js/main.js: {}
+    js/smoothscroll.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal.ajax
+  
