@@ -798,7 +798,7 @@ img, svg {
 /* Mobile Navigation
 /*-------------------------------------------*/
 
-.mobile-nav-toggle  {
+.nav-toggle  {
 	display: none;
 	position: relative;
 	z-index: 100;
@@ -810,7 +810,7 @@ img, svg {
 	-webkit-tap-highlight-color: transparent;
 }
 
-.mobile-nav-toggle span {
+.nav-toggle__line {
     width: 100%;
     height: 0.125rem;
     position: absolute;
@@ -818,26 +818,26 @@ img, svg {
     transition: 0.2s linear;
 }
 
-.mobile-nav-toggle span:nth-child(1) {
+.nav-toggle__line--first {
     left: 0;
     top: 0;
     transform: rotate(0deg);
 }
 
-.mobile-nav-toggle span:nth-child(2) {
+.nav-toggle__line--second {
     left: 0;
     bottom: 0;
     transform: rotate(0deg);
 }
 
-.mobile-nav-toggle--active span:nth-child(1) {
+.nav-toggle--active .nav-toggle__line--first {
     left: 0;
     top: 50%;  
     margin: -0.125rem 0 0 0;
     transform: rotate(-45deg);
 }
 
-.mobile-nav-toggle--active span:nth-child(2) {
+.nav-toggle--active .nav-toggle__line--second {
     left: 0;
     bottom: 50%; 
     transform: rotate(45deg);

@@ -41,7 +41,7 @@
     };
 
     var showMobileNav = function() {
-        $(".mobile-nav-toggle").addClass("mobile-nav-toggle--active");          
+        $(".nav-toggle").addClass("nav-toggle--active");          
         $(".mobile-nav").fadeIn("200");  
         gsap.to(".mobile-menu__item", {
             duration: 0.5,
@@ -53,7 +53,7 @@
     }; 
 
     var hideMobileNav = function() {
-        $(".mobile-nav-toggle").removeClass("mobile-nav-toggle--active");
+        $(".nav-toggle").removeClass("nav-toggle--active");
         $(".mobile-nav").fadeOut("200"); 
         gsap.to(".mobile-menu__item", {
             duration: 0.2,
@@ -67,10 +67,10 @@
         showContent();
     });
 
-    $(".region-header-right").append('<button class="mobile-nav-toggle"><span></span><span></span></button>');
+    $(".region-header-right").append('<button class="nav-toggle"><span class="nav-toggle__line nav-toggle__line--first"></span><span class="nav-toggle__line nav-toggle__line--second"></span></button>');
 
-    $(".mobile-nav-toggle").click(function() {               
-        if(!$(this).hasClass("mobile-nav-toggle--active")) {  
+    $(".nav-toggle").click(function() {               
+        if(!$(this).hasClass("nav-toggle--active")) {  
             showMobileNav();
         }
         else {                    
